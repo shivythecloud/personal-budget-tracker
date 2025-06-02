@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const userRoutes = require('./routes/users');
 const categoryRoutes = require('./routes/categories');
-const transactionRoutes = require('./routes/transactions');
+const transactionRoutes = require('./routes/transactionRoutes'); // Use your new transaction routes
+const authRoutes = require('./routes/auth'); // Import auth routes properly
 
 require('dotenv').config();
 
@@ -13,13 +14,12 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use('/api/users', userRoutes);
 
-// Routes
+// Routes - Mount each route only once
 app.use('/api/users', userRoutes);
-app.use('/api/auth', require('./routes/auth'));
+app.use('/api/transactions', transactionRoutes); // Use your new transaction routes
+app.use('/api/auth', authRoutes); // Use the imported auth routes
 app.use('/api/categories', categoryRoutes);
-app.use('/api/transactions', transactionRoutes);
 
 // Test route
 app.get('/api/test', (req, res) => {
@@ -43,4 +43,3 @@ mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/personal-bu
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-

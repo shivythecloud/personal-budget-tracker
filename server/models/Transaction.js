@@ -1,6 +1,13 @@
 const mongoose = require('mongoose');
 
 const transactionSchema = new mongoose.Schema({
+
+  userid: {
+    type:mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },
+
   description: {
     type: String,
     required: [true, 'Transaction description is required'],
