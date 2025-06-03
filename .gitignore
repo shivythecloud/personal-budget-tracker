@@ -1,0 +1,35 @@
+# Dependency directories
+node_modules/
+
+
+# Environment files
+.env
+.server.env
+*.env*
+
+
+# IDE and editor files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+# System files
+.DS_Store
+Thumbs.db
+
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+# Build directories
+dist/
+build/
+client/build/
