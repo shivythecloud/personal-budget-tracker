@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const { body, validationResult } = require('express-validator');
+const transactionController = require('../controllers/transactionControllers');
 const Transaction = require('../models/Transaction');
 const verifyToken = require('../middleware/auth');
 
+router.get('/sumary', transactionController.getDashboardStats);
 
 router.get('/', verifyToken, async (req, res) => {
   try {
