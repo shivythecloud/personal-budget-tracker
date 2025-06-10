@@ -1,0 +1,54 @@
+.income-card {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+
+.income-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+.income-card .card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+.income-card .card-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+
+.income-card .card-value {
+  margin: 0;
+  font-weight: 600;
+}
+
+
+.income-card .card-change {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.income-card .card-icon {
+  font-size: 16px;
+}
+
+
+.income-card .income-icon {
+  color: #52c41a;
+}
+
+
+.income-card .card-percentage {
+  font-size: 14px;
+  color: #52c41a;
+}

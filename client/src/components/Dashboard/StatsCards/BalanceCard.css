@@ -1,0 +1,75 @@
+.balance-card {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+
+.balance-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+.balance-card .card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+.balance-card .card-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+
+.balance-card .card-value {
+  margin: 0;
+  font-weight: 600;
+}
+
+
+.balance-card.positive .card-value {
+  color: #52c41a;
+}
+
+
+.balance-card.negative .card-value {
+  color: #f5222d;
+}
+
+
+.balance-card .card-change {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.balance-card .card-icon {
+  font-size: 16px;
+}
+
+
+.balance-card .balance-icon.positive {
+  color: #52c41a;
+}
+
+
+.balance-card .balance-icon.negative {
+  color: #f5222d;
+}
+
+
+.balance-card .card-percentage.positive {
+  color: #52c41a;
+  font-size: 14px;
+}
+
+
+.balance-card .card-percentage.negative {
+  color: #f5222d;
+  font-size: 14px;
+}

@@ -1,0 +1,54 @@
+.expense-card {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+
+.expense-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+.expense-card .card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+.expense-card .card-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+
+.expense-card .card-value {
+  margin: 0;
+  font-weight: 600;
+}
+
+
+.expense-card .card-change {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.expense-card .card-icon {
+  font-size: 16px;
+}
+
+
+.expense-card .expense-icon {
+  color: #f5222d;
+}
+
+
+.expense-card .card-percentage {
+  font-size: 14px;
+  color: #f5222d;
+}
