@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../../context/AuthContext'; // <-- fixed path
 import { LogOut, Wallet, ArrowDownCircle, ArrowUpCircle } from 'lucide-react';
-import { DataProvider } from './DataProvider';
-import TransactionList from './TransactionList';
-import CategoryList from './CategoryList';
+import { DataProvider } from '../DataProvider';
+import TransactionList from '../TransactionList';
+import CategoryList from '../CategoryList';
 
 
 const DashboardContent = () => {
@@ -16,7 +16,6 @@ const DashboardContent = () => {
 
 
   useEffect(() => {
-    // Fetch dashboard stats from your API
     const fetchStats = async () => {
       try {
         const response = await fetch('/api/transactions/summary');
